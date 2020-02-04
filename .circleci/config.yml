@@ -17,7 +17,7 @@ jobs:
   carthage-build:
     executor: xcode-11
     steps:
-      - checkout
+      - checkout # We can skip the Ruby gem restoration for Carthage
       - run:
           name: Update homebrew dependencies
           command: brew update 1> /dev/null 2> /dev/null
